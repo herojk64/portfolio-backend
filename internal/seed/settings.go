@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/herojk64/portfolio/internal/database/sqlc"
+	"github.com/herojk64/portfolio-backend/internal/database/sqlc"
 )
 
 type SettingsData struct {

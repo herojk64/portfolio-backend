@@ -1,6 +1,6 @@
 package seed
 
-import "github.com/herojk64/portfolio/internal/database/sqlc"
+import "github.com/herojk64/portfolio-backend/internal/database/sqlc"
 
 type Seeder struct {
 	q *sqlc.Queries

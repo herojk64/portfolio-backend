@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 
-	"github.com/herojk64/portfolio/internal/config"
-	"github.com/herojk64/portfolio/internal/database"
-	"github.com/herojk64/portfolio/internal/database/sqlc"
-	"github.com/herojk64/portfolio/internal/seed"
+	"github.com/herojk64/portfolio-backend/internal/config"
+	"github.com/herojk64/portfolio-backend/internal/database"
+	"github.com/herojk64/portfolio-backend/internal/database/sqlc"
+	"github.com/herojk64/portfolio-backend/internal/seed"
 )
 
 func main() {

@@ -5,9 +5,9 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/herojk64/portfolio/internal/database/sqlc"
-	"github.com/herojk64/portfolio/internal/pkg/response"
-	"github.com/herojk64/portfolio/internal/service"
+	"github.com/herojk64/portfolio-backend/internal/database/sqlc"
+	"github.com/herojk64/portfolio-backend/internal/pkg/response"
+	"github.com/herojk64/portfolio-backend/internal/service"
 )
 
 type UserHandler struct {

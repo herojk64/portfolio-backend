@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 
-	"github.com/herojk64/portfolio/internal/database/sqlc"
-	"github.com/herojk64/portfolio/internal/pkg/convert"
+	"github.com/herojk64/portfolio-backend/internal/database/sqlc"
+	"github.com/herojk64/portfolio-backend/internal/pkg/convert"
 	"github.com/jackc/pgx/v5/pgtype"
 )
 

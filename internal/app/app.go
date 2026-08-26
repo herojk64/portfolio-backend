@@ -8,8 +8,8 @@ import (
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
-	"github.com/herojk64/portfolio/internal/config"
-	"github.com/herojk64/portfolio/internal/pkg/response"
+	"github.com/herojk64/portfolio-backend/internal/config"
+	"github.com/herojk64/portfolio-backend/internal/pkg/response"
 	"github.com/utrack/gin-csrf"
 )
 

@@ -6,9 +6,9 @@ import (
 	"strconv"
 
 	"github.com/gin-gonic/gin"
-	"github.com/herojk64/portfolio/internal/pkg/convert"
-	"github.com/herojk64/portfolio/internal/pkg/response"
-	"github.com/herojk64/portfolio/internal/service"
+	"github.com/herojk64/portfolio-backend/internal/pkg/convert"
+	"github.com/herojk64/portfolio-backend/internal/pkg/response"
+	"github.com/herojk64/portfolio-backend/internal/service"
 )
 
 type SkillHandler struct {

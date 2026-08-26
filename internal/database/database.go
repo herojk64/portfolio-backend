@@ -3,7 +3,7 @@ package database
 import (
 	"context"
 
-	"github.com/herojk64/portfolio/internal/config"
+	"github.com/herojk64/portfolio-backend/internal/config"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 

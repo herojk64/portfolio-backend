@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/herojk64/portfolio/internal/database/sqlc"
+	"github.com/herojk64/portfolio-backend/internal/database/sqlc"
 	"github.com/jackc/pgx/v5"
 )
 
