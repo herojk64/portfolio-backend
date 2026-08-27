@@ -13,7 +13,7 @@ func Load() (*Config, error) {
 	v.SetDefault("app.name", "backend")
 	v.SetDefault("app.env", "development")
 	v.SetDefault("app.port", "8000")
-	v.SetDefault("app.allowed_hosts", []string{})
+	v.SetDefault("app.allowed_hosts", []string{"http://localhost:3000"})
 
 	v.SetDefault("database.host", "localhost")
 	v.SetDefault("database.port", 5432)
@@ -40,6 +40,7 @@ func Load() (*Config, error) {
 	_ = v.BindEnv("app.name", "APP_NAME")
 	_ = v.BindEnv("app.env", "APP_ENV")
 	_ = v.BindEnv("app.port", "APP_PORT")
+	_ = v.BindEnv("app.allowed_hosts", "APP_ALLOWED_HOSTS")
 
 	_ = v.BindEnv("database.host", "DATABASE_HOST")
 	_ = v.BindEnv("database.port", "DATABASE_PORT")
