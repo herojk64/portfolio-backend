@@ -1,0 +1,504 @@
+basePath: /api/v1
+definitions:
+  handler.ProjectRequest:
+    properties:
+      description:
+        type: string
+      display_order:
+        type: integer
+      image_url:
+        type: string
+      is_featured:
+        type: boolean
+      live_url:
+        type: string
+      repo_url:
+        type: string
+      title:
+        type: string
+    required:
+    - title
+    type: object
+  handler.ProjectSkillRequest:
+    properties:
+      skill_id:
+        type: string
+    required:
+    - skill_id
+    type: object
+  handler.SettingRequest:
+    properties:
+      key:
+        type: string
+      value:
+        type: object
+    required:
+    - key
+    - value
+    type: object
+  handler.SettingUpdateRequest:
+    properties:
+      value:
+        type: object
+    required:
+    - value
+    type: object
+  handler.SkillRequest:
+    properties:
+      category:
+        type: string
+      display_order:
+        type: integer
+      icon:
+        type: string
+      name:
+        type: string
+      proficiency:
+        type: string
+    required:
+    - name
+    type: object
+  response.Envelop:
+    properties:
+      data: {}
+      error:
+        type: string
+      success:
+        type: boolean
+    type: object
+host: localhost:8000
+info:
+  contact: {}
+  description: REST API for portfolio backend — projects, skills, and settings.
+  title: Portfolio API
+  version: "1.0"
+paths:
+  /projects:
+    get:
+      parameters:
+      - description: Filter by featured status
+        in: query
+        name: featured
+        type: boolean
+      - description: Search by title
+        in: query
+        name: search
+        type: string
+      - default: 20
+        description: Max results
+        in: query
+        name: limit
+        type: integer
+      - default: 0
+        description: Pagination offset
+        in: query
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: List projects
+      tags:
+      - projects
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Project data
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/handler.ProjectRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Create a project
+      tags:
+      - projects
+  /projects/{id}:
+    delete:
+      parameters:
+      - description: Project UUID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Delete a project
+      tags:
+      - projects
+    get:
+      parameters:
+      - description: Project UUID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Get a project by ID
+      tags:
+      - projects
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Project UUID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Project data
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/handler.ProjectRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Update a project
+      tags:
+      - projects
+  /projects/{id}/skills:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Project UUID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Skill to add
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/handler.ProjectSkillRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Add a skill to a project
+      tags:
+      - projects
+  /projects/{id}/skills/{skillId}:
+    delete:
+      parameters:
+      - description: Project UUID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Skill UUID
+        in: path
+        name: skillId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Remove a skill from a project
+      tags:
+      - projects
+  /settings:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: List all settings
+      tags:
+      - settings
+    post:
+      consumes:
+      - application/json
+      description: Creates the key if it does not exist, otherwise updates the value.
+        Value is arbitrary JSON.
+      parameters:
+      - description: Setting key and JSON value
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/handler.SettingRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Create or update a setting
+      tags:
+      - settings
+  /settings/{key}:
+    delete:
+      parameters:
+      - description: Setting key
+        in: path
+        name: key
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Delete a setting
+      tags:
+      - settings
+    get:
+      description: 'Keys in use: profile, social'
+      parameters:
+      - description: Setting key (e.g. profile, social)
+        in: path
+        name: key
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Get a setting by key
+      tags:
+      - settings
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Setting key
+        in: path
+        name: key
+        required: true
+        type: string
+      - description: New JSON value
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/handler.SettingUpdateRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Update a setting's value
+      tags:
+      - settings
+  /skills:
+    get:
+      parameters:
+      - description: Filter by category (Backend, Frontend, DevOps, Database, Scripting)
+        in: query
+        name: category
+        type: string
+      - description: Search by name
+        in: query
+        name: search
+        type: string
+      - default: 50
+        description: Max results
+        in: query
+        name: limit
+        type: integer
+      - default: 0
+        description: Pagination offset
+        in: query
+        name: offset
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: List skills
+      tags:
+      - skills
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: Skill data
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/handler.SkillRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Create a skill
+      tags:
+      - skills
+  /skills/{id}:
+    delete:
+      parameters:
+      - description: Skill UUID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Delete a skill
+      tags:
+      - skills
+    get:
+      parameters:
+      - description: Skill UUID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "404":
+          description: Not Found
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Get a skill by ID
+      tags:
+      - skills
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: Skill UUID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Skill data
+        in: body
+        name: body
+        required: true
+        schema:
+          $ref: '#/definitions/handler.SkillRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/response.Envelop'
+        "400":
+          description: Bad Request
+          schema:
+            $ref: '#/definitions/response.Envelop'
+      summary: Update a skill
+      tags:
+      - skills
+schemes:
+- http
+swagger: "2.0"

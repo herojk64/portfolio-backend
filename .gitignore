@@ -1,4 +1,3 @@
 .env
 config/config.yaml
 internal/seed/data/*
-docs/
