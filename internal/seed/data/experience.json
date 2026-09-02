@@ -1,0 +1,42 @@
+[
+  {
+    "company": "Geofinity Solutions Pvt. Ltd.",
+    "role": "Software Developer",
+    "description": "Developed backend systems for donation, event, ticketing, and reservation workflows with secure transaction handling.\nBuilt and maintained payment integrations including PayPal, Apple Pay, and CRM systems.\nDesigned and optimized PostgreSQL databases, including geospatial queries for map-based features.\nWorked on backend services using Frappe, Laravel, and Go for internal scripts and automation tasks.\nHandled production deployments, server configuration, SSL setup, and performance optimization.\nMigrated and maintained core business logic across backend systems ensuring stability and consistency.",
+    "start_date": "2025-06",
+    "end_date": "",
+    "location": "Kathmandu, Nepal"
+  },
+  {
+    "company": "Mobizila",
+    "role": "Software Developer",
+    "description": "Developed and maintained backend systems for the company's production platform, focusing on stability, scalability, and feature delivery.\nManaged production infrastructure including hosting, server performance, uptime, and security.\nDesigned and implemented backend features, bug fixes, and performance improvements for core system workflows.\nWorked on system reliability and coordinated with teams to ensure smooth deployment and operation of services.",
+    "start_date": "2024-11",
+    "end_date": "2025-06",
+    "location": "Kathmandu, Nepal"
+  },
+  {
+    "company": "Phu Technologies Ltd.",
+    "role": "Laravel Developer",
+    "description": "Integrated Nabil Bank payment gateway into a production Laravel system, implementing secure transaction processing and backend payment workflows.\nConfigured and maintained backend services, environment setup, and API integrations to ensure reliable payment operations and data consistency.\nDeveloped and tested backend services for payment processing, improving system reliability and transaction flow stability.\nWorked on API integration and backend troubleshooting in a live production environment.",
+    "start_date": "2024-07",
+    "end_date": "2024-08",
+    "location": "Kathmandu, Nepal"
+  },
+  {
+    "company": "Studio Matrix Pvt. Ltd.",
+    "role": "Laravel Developer Intern",
+    "description": "Contributed to backend development of Laravel-based applications, focusing on APIs, business logic, and database operations.\nWorked on API integration and backend feature implementation for production-level projects.\nAssisted in database design and optimization using MySQL.\nParticipated in debugging, code reviews, and improving backend system reliability and maintainability.",
+    "start_date": "2023-11",
+    "end_date": "2024-06",
+    "location": "Kathmandu, Nepal"
+  },
+  {
+    "company": "Digital Pathshala",
+    "role": "Full Stack PHP Developer",
+    "description": "Developed backend features for an educational platform, including quiz systems, content management, and core application logic.\nBuilt and maintained REST APIs to support real-time interactions and dynamic content delivery.\nWorked on system performance improvements, focusing on scalability and backend reliability.\nContributed to database design and backend workflow implementation for platform features.",
+    "start_date": "2023-09",
+    "end_date": "2023-10",
+    "location": "Kathmandu, Nepal"
+  }
+]

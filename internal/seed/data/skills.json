@@ -1,0 +1,21 @@
+[
+  { "name": "PHP",                             "category": "Backend",   "proficiency": "Advanced",     "icon": "php",        "display_order": 1  },
+  { "name": "Laravel",                         "category": "Backend",   "proficiency": "Advanced",     "icon": "laravel",    "display_order": 2  },
+  { "name": "Python",                          "category": "Backend",   "proficiency": "Advanced",     "icon": "python",     "display_order": 3  },
+  { "name": "Django",                          "category": "Backend",   "proficiency": "Advanced",     "icon": "django",     "display_order": 4  },
+  { "name": "FastAPI",                         "category": "Backend",   "proficiency": "Advanced",     "icon": "fastapi",    "display_order": 5  },
+  { "name": "Frappe",                          "category": "Backend",   "proficiency": "Intermediate", "icon": "",           "display_order": 6  },
+  { "name": "Go",                              "category": "Backend",   "proficiency": "Intermediate", "icon": "go",         "display_order": 7  },
+  { "name": "React",                           "category": "Frontend",  "proficiency": "Advanced",     "icon": "react",      "display_order": 8  },
+  { "name": "Svelte",                          "category": "Frontend",  "proficiency": "Intermediate", "icon": "svelte",     "display_order": 9  },
+  { "name": "Lua",                             "category": "Scripting", "proficiency": "Intermediate", "icon": "lua",        "display_order": 10 },
+  { "name": "Bash",                            "category": "Scripting", "proficiency": "Advanced",     "icon": "bash",       "display_order": 11 },
+  { "name": "Linux",                           "category": "DevOps",    "proficiency": "Advanced",     "icon": "linux",      "display_order": 12 },
+  { "name": "Docker",                          "category": "DevOps",    "proficiency": "Intermediate", "icon": "docker",     "display_order": 13 },
+  { "name": "CI/CD",                           "category": "DevOps",    "proficiency": "Intermediate", "icon": "",           "display_order": 14 },
+  { "name": "Server Hosting & Administration", "category": "DevOps",    "proficiency": "Advanced",     "icon": "",           "display_order": 15 },
+  { "name": "Security",                        "category": "DevOps",    "proficiency": "Intermediate", "icon": "",           "display_order": 16 },
+  { "name": "PostgreSQL",                      "category": "Database",  "proficiency": "Advanced",     "icon": "postgresql", "display_order": 17 },
+  { "name": "MariaDB",                         "category": "Database",  "proficiency": "Advanced",     "icon": "mariadb",    "display_order": 18 },
+  { "name": "MongoDB",                         "category": "Database",  "proficiency": "Intermediate", "icon": "mongodb",    "display_order": 19 }
+]

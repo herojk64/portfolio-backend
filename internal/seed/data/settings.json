@@ -1,0 +1,40 @@
+[
+  {
+    "key": "profile",
+    "value": {
+      "name": "Amit Dhakal",
+      "description": "Backend engineer focused on building production backend systems, APIs, and developer tools. I design reliable services that handle data, workflow automation, and integrations with external systems — systems that are maintainable, predictable in production, and easy to extend when requirements change.",
+      "role": "Software Developer",
+      "location": "Kathmandu, Nepal",
+      "available_for_work": true,
+      "email": "herojk64@gmail.com",
+      "phone_no": "+9779709421524",
+      "icon": ""
+    }
+  },
+  {
+    "key": "social",
+    "value": [
+      {
+        "title": "Github",
+        "url": "https://github.com/herojk64",
+        "icon": ""
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/herojk64/",
+        "icon": ""
+      },
+      {
+        "title": "Fiverr",
+        "url": "https://www.fiverr.com/s/DB8r2lN",
+        "icon": ""
+      },
+      {
+        "title": "Website",
+        "url": "https://amitdhakal2025.com.np",
+        "icon": ""
+      }
+    ]
+  }
+]

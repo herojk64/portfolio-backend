@@ -1,0 +1,65 @@
+[
+  {
+    "title": "TaskPilot CLI",
+    "description": "A command-line workflow orchestration system designed to integrate and synchronize tasks across multiple external platforms and a local task execution environment in a local-first manner.\n\nUses a pluggable integration architecture supporting multiple task providers (e.g., Jira) through a unified mapping layer, enabling scalable expansion to additional platforms without modifying core workflow logic.\n\nManages structured task state transitions, synchronization logic, and local persistence to ensure consistent workflow execution across environments. Supports AI-assisted context injection to enhance task execution and decision workflows.\n\nBuilt with a focus on extensible architecture, state management, API integration, and developer workflow automation.",
+    "repo_url": "",
+    "live_url": "",
+    "image_url": "",
+    "is_featured": true,
+    "display_order": 1
+  },
+  {
+    "title": "Tomb Wave – Multi-Tenant E-Library System",
+    "description": "A multi-tenant digital library platform enabling independent institutions to manage and distribute eBooks, audiobooks, and research publications within a shared infrastructure.\n\nProvides tenant isolation, metadata management, advanced resource categorization, and search capabilities while maintaining a scalable architecture that supports multiple organizations without compromising data separation.",
+    "repo_url": "",
+    "live_url": "",
+    "image_url": "",
+    "is_featured": true,
+    "display_order": 2
+  },
+  {
+    "title": "Ticket Management & Booking Platform",
+    "description": "A production ticket management and booking platform supporting event management, ticket purchasing, booking workflows, and operational administration for large-scale events.\n\nContributed to backend feature development, booking workflow implementation, query optimization, and performance improvements while collaborating with cross-functional teams to deliver scalable and reliable functionality.",
+    "repo_url": "",
+    "live_url": "",
+    "image_url": "",
+    "is_featured": true,
+    "display_order": 3
+  },
+  {
+    "title": "Smart Parking Management Platform",
+    "description": "A commercial smart parking platform with backend APIs for mobile and web applications. Contributed to implementing new platform features and improving overall system performance.\n\nWorked across enterprise workflow customization, billing and invoicing configuration, production deployments, and backend service maintenance. Managed production server deployments and release pipelines while supporting a distributed backend architecture used by real customers.",
+    "repo_url": "",
+    "live_url": "",
+    "image_url": "",
+    "is_featured": false,
+    "display_order": 4
+  },
+  {
+    "title": "E-Commerce & Inventory Management Platform",
+    "description": "A production e-commerce platform supporting product management, inventory tracking, order processing, and business operations.\n\nDeveloped and customized platform features, integrated business workflows, and implemented enhancements to support inventory management, product catalog maintenance, and operational efficiency.",
+    "repo_url": "",
+    "live_url": "",
+    "image_url": "",
+    "is_featured": false,
+    "display_order": 5
+  },
+  {
+    "title": "Hospital Website & Appointment Portal",
+    "description": "A production hospital website with an online appointment booking system. Implemented responsive user interfaces and interactive components while integrating the booking workflow with existing backend services.\n\nContributed to SEO through metadata management, page optimization, and social sharing tags to improve search visibility and discoverability.",
+    "repo_url": "",
+    "live_url": "",
+    "image_url": "",
+    "is_featured": false,
+    "display_order": 6
+  },
+  {
+    "title": "Keep It Online – Hackathon",
+    "description": "A full-stack system simulating network reliability under constrained and failure-prone conditions, built for the Devpost hackathon (February 2026).\n\nDesigned and implemented core backend logic and game mechanics focusing on state transitions, system behavior, and real-time interaction handling. Developed responsive frontend interactions with dynamic state updates and real-time feedback loops.\n\nDelivered a production-ready prototype under strict time constraints. Tech focus: full-stack systems, backend logic design, real-time state handling, Git workflows.",
+    "repo_url": "",
+    "live_url": "",
+    "image_url": "",
+    "is_featured": false,
+    "display_order": 7
+  }
+]
